@@ -220,6 +220,9 @@ class ClientContext {
     deadline_ = deadline_tp.raw_time();
   }
 
+  // Compatibility with 0.14
+  void set_fail_fast(bool fail_fast) {}
+
 #ifndef GRPC_CXX0X_NO_CHRONO
   /// Return the deadline for the client call.
   std::chrono::system_clock::time_point deadline() {
